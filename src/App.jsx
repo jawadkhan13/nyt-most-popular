@@ -1,17 +1,23 @@
 
 import './App.css'
 import { Route, Switch } from "react-router-dom";
-import ArticalList from "./components/ArticleList/ArticleList";
+import Articles from "./components/Articles/Articles";
 import ArticleDetail from "./components/ArticleDetail/ArticleDetail";
 import ArticleItem from "./components/ArticleItem/ArticleItem";
-const App = () => {
 
+import useStyles from './components/styles'
+const App = () => {
+  const classes = useStyles();
 
   return (
-    <main className="text-3xl font-bold">
+    <div className={classes.root}>
+
+    <main className={classes.content}>
+    <div className={classes.toolbar}>
+
       <Switch>
         <Route exact path='/'>
-          <ArticalList />
+          <Articles />
         </Route>
         <Route exact path='/article'>
           <ArticleDetail />
@@ -20,7 +26,9 @@ const App = () => {
           <ArticleItem />
         </Route>
       </Switch>
+    </div>
     </main>
+    </div>
       
   )
 }
