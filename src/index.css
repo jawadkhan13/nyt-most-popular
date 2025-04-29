@@ -1,0 +1,27 @@
+@import url("https://fonts.cdnfonts.com/css/general-sans");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* width: 100dvw; */
+  overflow-x: hidden;
+  background-color: #dfdff0;
+  font-family: "General Sans", sans-serif;
+}
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-track{
+  background: #cfcfcf;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #a5a5a5;
+}
+
+*{
+  text-decoration: none;
+}
