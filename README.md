@@ -38,11 +38,13 @@ VITE_NYT_KEY=your-nyt-api-key-here
 
 
 🧪 **Testing**
-
+```bash
 npm run test:unit
+```
 
 **E2E Tests (Cypress)**
+```bash
 npm run cy:open
 npm run test:e2e
-
+```
 
