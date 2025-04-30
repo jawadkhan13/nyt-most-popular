@@ -10,6 +10,7 @@ A **React** + **Vite** application that fetches and displays the New York Times 
 - Vite
 - React.js
 - Tailwind CSS
+- Material UI 
 
 ## <a name="quick-start">🤸 Quick Start</a>
 Follow these steps to set up the project locally on your machine.
@@ -30,7 +31,7 @@ npm run dev
 Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
 
 
-**Configure API Key**
+🔑**Configure API Key**
 
 Create a file named .env in the project root:
 VITE_NYT_KEY=your-nyt-api-key-here
@@ -43,3 +44,5 @@ npm run test:unit
 **E2E Tests (Cypress)**
 npm run cy:open
 npm run test:e2e
+
+
