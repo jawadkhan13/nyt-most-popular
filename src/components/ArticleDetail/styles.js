@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
     borderRadius: '20px',
     boxShadow: '0.5em 1em 1em rgb(64, 64, 70)',
     width: '80%',
-   maxHeight: 400,                      // cap height
+   maxHeight: 400,                    
     objectFit: 'cover', 
     marginBottom: theme.spacing(6),
     [theme.breakpoints.down('md')]: {

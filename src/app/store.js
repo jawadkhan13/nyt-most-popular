@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { nytApi } from '../services/NYTDB';
+import { nytApi } from '@nyt';
 import articlePeriodReducer from '../features/currentArticleSlice';
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
     [nytApi.reducerPath]: nytApi.reducer,
     currentArticlePeriod: articlePeriodReducer,

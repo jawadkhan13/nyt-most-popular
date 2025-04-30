@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux'
 import { Box,CircularProgress, useMediaQuery, Typography } from '@mui/material';
-import { selectArticlePeriod } from '../../features/currentArticleSlice';
 
-import { useGetMostViewedQuery } from '../../services/NYTDB'
+import { useGetMostViewedQuery } from '@nyt'
 import { Bounded } from '../ui/Bounded'
 import ArticleList from '../ArticleList/ArticleList'
 

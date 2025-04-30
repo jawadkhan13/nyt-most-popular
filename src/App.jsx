@@ -3,7 +3,6 @@ import './App.css'
 import { Route, Switch } from "react-router-dom";
 import Articles from "./components/Articles/Articles";
 import ArticleDetail from "./components/ArticleDetail/ArticleDetail";
-import ArticleItem from "./components/ArticleItem/ArticleItem";
 import Navbar from "./components/Navbar/Navbar";
 import useStyles from './components/styles'
 const App = () => {

@@ -17,7 +17,7 @@ const Article = ({ article, i }) => {
   return (
     <Grid size={{xs:12, sm:6, }} className={classes.article}>
       <Grow in key={i} timeout={(i + 1) * 250}>
-        <Link to={`/article/${article.id}`} state={{ article }} className={classes.links}>
+        <Link data-testid="article-link" to={`/article/${article.id}`} state={{ article }} className={classes.links}>
           <img
             className={classes.image}
             src={posterImage}

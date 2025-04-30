@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectArticlePeriod } from '../../features/currentArticleSlice';
 import { Link, useLocation } from 'react-router-dom';
 import useStyles from "./styles";   
-const NavBar = () => {
+const Navbar = () => {
     const { articlePeriodName } = useSelector((state) => state.currentArticlePeriod);
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -35,4 +35,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

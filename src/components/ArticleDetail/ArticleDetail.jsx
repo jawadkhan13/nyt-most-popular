@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Typography, Grid, Button, CircularProgress } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
 
-import { useGetMostViewedQuery } from "../../services/NYTDB";
+import { useGetMostViewedQuery } from '@nyt';
 import useStyles from "./styles";
 import { Bounded } from "../ui/Bounded";
 const ArticleDetail = () => {
@@ -40,7 +40,7 @@ const ArticleDetail = () => {
         </Typography>
         <Typography variant="body1">{article.abstract}</Typography>
         </Grid>
-        <Button component={Link} to="/" startIcon={<ArrowBack />}>
+        <Button data-testid="back-button" component={Link} to="/" startIcon={<ArrowBack />} variant="outlined">
         Back
       </Button>
       </Grid>

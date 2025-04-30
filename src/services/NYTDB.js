@@ -1,8 +1,14 @@
 // src/api/nytApi.js
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const nytApiKey = import.meta.env.VITE_NYT_KEY;
-console.log(nytApiKey);
+function getApiKey() {
+  return (
+    (typeof import.meta !== 'undefined' && import.meta.env?.VITE_NYT_KEY) ||
+    process.env.VITE_NYT_KEY
+  );
+}
+
+// console.log(nytApiKey);
 const period = 1;
 
 export const nytApi = createApi({
@@ -12,6 +18,7 @@ export const nytApi = createApi({
      //* Get Article List 
     getMostViewed: builder.query({
       query: ({articlePeriodName}) => {
+        const nytApiKey = getApiKey();
         if (articlePeriodName && typeof articlePeriodName === 'string'){
           return `viewed/${articlePeriodName}.json?api-key=${nytApiKey}`
         }
