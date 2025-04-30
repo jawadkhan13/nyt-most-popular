@@ -1,12 +1,12 @@
 describe('NYT Most Popular Articles App', () => {
     it('loads the list of articles', () => {
-      cy.visit('/');                // <— first visit
+      cy.visit('/');                
       cy.get('[data-testid="article-link"]')
         .should('have.length.at.least', 1);
     });
   
     it('navigates to detail and back', () => {
-      cy.visit('/');                // <— you MUST visit again
+      cy.visit('/');                
       cy.get('[data-testid="article-link"]')
         .first()
         .click();

@@ -18,7 +18,6 @@ const ArticleDetail = () => {
   if (isFetching) return <CircularProgress />;
   if (error) return <Typography>Error loading.</Typography>;
 
-  // find the one matching ID
   const article = data.results.find((a) => String(a.id) === id);
   if (!article) return <Typography>Article not found.</Typography>;
 
