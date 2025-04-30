@@ -15,9 +15,9 @@ const Article = ({ article, i }) => {
       : "https://via.placeholder.com/300x450?text=No+Image";
 
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3} xl={2} className={classes.article}>
+    <Grid size={{xs:12, sm:6, }} className={classes.article}>
       <Grow in key={i} timeout={(i + 1) * 250}>
-        <Link to={`/movie/${article.id}`} className={classes.links}>
+        <Link to={`/article/${article.id}`} state={{ article }} className={classes.links}>
           <img
             className={classes.image}
             src={posterImage}

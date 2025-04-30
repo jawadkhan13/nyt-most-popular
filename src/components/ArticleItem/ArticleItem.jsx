@@ -1,8 +1,8 @@
 import React from 'react'
-import { Bounded } from '../Bounded'
+// import { Bounded } from '../Bounded'
 const ArticleItem = () => {
   return (
-    <Bounded>ArticleItem</Bounded>
+    <div>ArticleItem</div>
   )
 }
 

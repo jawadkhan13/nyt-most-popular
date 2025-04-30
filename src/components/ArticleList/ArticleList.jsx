@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react'
 import { Grid } from '@mui/material';
 import useStyles from './styles'
-import { useSelector } from 'react-redux'
-import { useGetMostViewedQuery } from '../../services/NYTDB'
-import { Bounded } from '../Bounded'
+import { Bounded } from '../ui/Bounded'
 import Article from '../Article/Article';
 const ArticleList = ({ articles }) => {
   const classes = useStyles();

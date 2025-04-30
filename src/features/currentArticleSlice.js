@@ -1,14 +1,19 @@
-// src/features/currentArticleSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
-const slice = createSlice({
-  name: 'currentArticle',
-  initialState: null,
+export const articlePeriod = createSlice({
+  name: 'articlePeriod',
+  initialState: {
+    articlePeriodName:'',
+    period: 1,
+  },
   reducers: {
-    setArticle: (state, action) => action.payload,
-    clearArticle: () => null,
+    selectArticlePeriod: (state, action) => {
+      state.articlePeriodName = action.payload
+    },
+    
   },
 });
 
-export const { setArticle, clearArticle } = slice.actions;
-export default slice.reducer;
+export const { selectArticlePeriod } = articlePeriod.actions
+
+export default articlePeriod.reducer;
