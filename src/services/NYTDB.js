@@ -9,6 +9,7 @@ export const nytApi = createApi({
   reducerPath: 'nytApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.nytimes.com/svc/mostpopular/v2' }),
   endpoints: (builder) => ({
+     //* Get Article List 
     getMostViewed: builder.query({
       query: ({articlePeriodName}) => {
         if (articlePeriodName && typeof articlePeriodName === 'string'){
@@ -17,6 +18,7 @@ export const nytApi = createApi({
         return `viewed/${period}.json?api-key=${nytApiKey}`
       }
     }),
+
   }),
 });
 
